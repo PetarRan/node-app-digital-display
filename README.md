@@ -16,7 +16,8 @@ Podelite taskove da zavrsimo sve do tada. Sve sto je potrebno nalazi se ovde
    - Treba na wikipedia.org da se nadje nesto o sedmo-segmentnim displejevima i da se pedatno i kratko odradi
    uvod u projekat. Takodje potrebno je naci nesto o <a href="https://nodejs.org/en/">Node.js</a>-u i ukratko opisati okruzenje u kome je program radjen.
    
-   - U .vs fajlu vam se nalazi source code, otvarajte ga preko visual studio code kada sa pull-ujete preko gita
+   
+   - U .js fajlu vam se nalazi source code, otvarajte ga preko visual studio code kada sa pull-ujete preko gita
    folder. Pazite da vam fajl words.txt bude u istom folderu, inace nece da radi program jer nema iz kog fajla da
    cita u string.
    
