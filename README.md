@@ -1,45 +1,34 @@
 # Software Solution for Finding the Longest Word in English dictionary Suitable for 7-Segment Display
-Studentski projekat za oktobar 2020 godine - Elektronski Fakultet u Nisu
+IEEESTEC Student Project 2020
 
-E ovako momci, mogli ste zakljuciti iz naziva projekta da se radi o softveru radjenom u frejmworku
-javascripta zvanom <a href="https://nodejs.org/en/">Node.js</a>. Svrha ovog programa je da iz engleskog
-recnika od <b>460k+</b> reci izvuce one najduze, koje ispunjavaju uslov da se sva njihova slova mogu
-predstaviti na 7-segmentni displej. Ja sam pokusao svako slovo od A -> Z, ispada da jedina slova koja
-se ne mogu predstaviti sadrze kvazi dijagonale ili zakrivljenja koja se ne mogu adaptirati na displejevima.
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-<b>Deadline je do 02.10.</b> Imate u repository-u Uputsvta i templejt kako to treba da izgleda.
-Podelite taskove da zavrsimo sve do tada. Sve sto je potrebno nalazi se ovde
+## This Node.js app aims to find the longest suitable word in English dictionary suitable for displaying on 7-segment displays.
 
-   - Ovaj projekat treba srediti i predstaviti ga lepo u jednom word fajlu. Primer imate u master branchu pod imenom
-   "IEEESTEC_Rad-PetarRandjelovic.doc"
+## Inspiration
+If we take a look at 7-segment displays, used primarily to display `hexadecimal` characters, we wonder what is the longest word that we can form out of a sequence of these things?
+Also, that launches a sequence of questions regarding it, like:
+- Are there any letters that cannot be displayed properly on limited 7 segments we have?
+- Is there a way to tell which letters can be showed on these displays?
+- Is it even worth trying?
 
-   - Treba na wikipedia.org da se nadje nesto o sedmo-segmentnim displejevima i da se pedatno i kratko odradi
-   uvod u projekat. Takodje potrebno je naci nesto o <a href="https://nodejs.org/en/">Node.js</a>-u i ukratko opisati okruzenje u kome je program radjen.
-   
-   
-   - U .js fajlu vam se nalazi source code, otvarajte ga preko visual studio code kada sa pull-ujete preko gita
-   folder. Pazite da vam fajl words.txt bude u istom folderu, inace nece da radi program jer nema iz kog fajla da
-   cita u string.
-   
-   - Ostavio sam komentare i precizno opisao funkcije i tok programa, te komentare je potrebno brisati paralelno
-   sa opisivanjem rada(tu su samo da vam pojasne linije koda). Kada lepo i pedantno u word fajlu opisete rad programa,
-   pobrisite komentare.
-   
-   - Nakon brisanja komentara, treba uraditi par lepih screenshotova. Stavite koji god Preferences->Themes hocete,
-   moze biti light mode, dark mode... svejedno koji fazon stavite, bitno je da izgleda lepo na oko.
-   <i>Imate vec par screenshot-ova u master brench-u, ako mislite da mozete bolje, commitujte ih ovde</i>
-   
-   - Nakon zavrsenog posla, treba udariti screenshotove outputa i objasniti kako i sta se desilo? Zasto je to izaslo?
-   Bitno mi je da budete pedantni i precizni kad opisujete pojave, da izgleda kao da je pisao inzenjer a ne profesorka
-   srpskog jezika.
-   
-   - Kada dobijete output, izaberite par lepih reci i predstavite ih preko virtuelnih 7-segmentnih displejeva.
-   -->http://www.uize.com/examples/seven-segment-display.html --> Skrinsotujte slovo po slovo.
-   Daca moze u photoshopu da spoji 20-ak(potrebno je 24 valjda) i da sastavite par reci, karatker po karakter.
-   
-   - Odakle god se sluzite, cuvajte to u posebnom text fajlu pod nazivom REFERENCES. S' time sto cete ih pisati
-   i u word dokumentu na kraju(e.g. http://en.wikipedia.org etc.)
-   
-Ukoliko nesto zafali, ili vam je potrebna pomoc, pisite mi na <b>mejl</b>/<b>whatsapp</b> - petarrand.1@gmail.com
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/7-segment_bcdfg.svg/24px-7-segment_bcdfg.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/7-segment_abefg.svg/24px-7-segment_abefg.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/7-segment_aefg.svg/24px-7-segment_aefg.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/7-segment_abcefg.svg/24px-7-segment_abcefg.svg.png)
 
-<i>P</i>
+
+## Solution
+If we do it manually, it will take us days, weeks, even months depening on how much time we put into this tiring process daily. There is roughly around **300,000** words in English lanugage, therefore we need help from our friends, machines.
+- data is segmented in a single text file and read by the machine
+- a regular expression is used to single out the words that can be displayed
+- how did we find the letters that cannot be displayed? Well we tried. (M, V, W, X in the Latin alphabet)
+- compare the lenght of the words that met the criteria of a **regex**
+- display all of these words
+And there you have it. Smooth like a limestone.
+
+## Purpose
+The purpose of this project is not mainly in representing data on 7-segment displays, it's main purpose is a smooth traversal through large data-file sets and lookin for something of importance. This algorithm can be further use to traversal any textfile and if updated, any .csv / excel files of sort.
+
+
+This project is licensed by University of Nis, Serbia
+| License      | Owner |
+| ----------- | ----------- |
+| Student Project | Petar Randjelovic |
